@@ -20,7 +20,7 @@
             background-image: url('fireinthehole.png');
             background-size: cover;
             border: none;
-            cursor: none;
+            cursor: default;
             outline: none;
         }
 
@@ -39,6 +39,11 @@
 <body>
     <h1>Made by Tplay (discord: @tplayoff)</h1>
     <button class="round-img"></button>
-    <audio src="0306.mp3" autoplay="autoplay" loop="loop"></audio>
-
+    <audio id="pranksound" src="0306.mp3" loop="loop"></audio>
+    <script src="template.js"></script>
+    <script>
+        window.onload = function () {
+            document.getElementById("pranksound").play();
+        }
+    </script>
 </body></html>
