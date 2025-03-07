@@ -38,12 +38,14 @@
 </style></head>
 <body>
     <h1>Made by Tplay (discord: @tplayoff)</h1>
-    <button class="round-img"></button>
-    <audio id="pranksound" src="0306.mp3" loop="loop"></audio>
-    <script src="template.js"></script>
+    <button id="roundimg" class="round-img" onclick="play()"></button>
+    <audio id="pranksound" src="0306.mp3"></audio>
     <script>
-        window.onload = function () {
-            document.getElementById("pranksound").play();
+        function play() {
+            var sound = document.getElementById('pranksound');
+            var button = document.getElementById('roundimg');
+            sound.loop = "loop";
+            sound.play();
         }
     </script>
 </body></html>
