@@ -39,10 +39,11 @@
 <body>
     <h1>Made by Tplay (discord: @tplayoff)</h1>
     <button class="round-img" onclick="play()"></button>
-    <audio id="pranksound" src="sounds/picun.mp3"></audio>
+    <audio id="pranksound"></audio>
     <script>
         function play() {
-            var sound = document.getElementById('pranksound');
+            document.getElementById("pranksound").src = "sounds/" + ( Math.floor(Math.random() * 12) + 1 ) + ".mp3";
+            var sound = document.getElementById("pranksound");
             sound.loop = "loop";
             sound.play();
         }
